@@ -58,25 +58,25 @@ class DetailsScreen extends StatelessWidget {
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  Text(dish['name']!, style: TextStyle(fontSize: 22, fontWeight: FontWeight.bold)),
+                  Text(dish['name']!, style: TextStyle(fontSize: 22, fontWeight: FontWeight.bold,color: Colors.white)),
                   SizedBox(height: 8),
                   Row(
                     children: [
                       Icon(Icons.timer, color: Colors.green, size: 18),
                       SizedBox(width: 6),
-                      Text(dish['time']!),
+                      Text(dish['time']!,style: TextStyle(color: Colors.white),),
                       SizedBox(width: 12),
                       Icon(Icons.star, color: Colors.red, size: 18),
                       SizedBox(width: 6),
-                      Text(dish['rating']!),
+                      Text(dish['rating']!,style: TextStyle(color: Colors.white),),
                     ],
                   ),
                   SizedBox(height: 12),
-                  Text(dish['price']!, style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold)),
+                  Text(dish['price']!, style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold,color: Colors.white)),
                   SizedBox(height: 12),
                   Text(
                     'A delicious and popular Indian dish, prepared with fresh ingredients and aromatic spices. Perfect for a satisfying meal.',
-                    style: TextStyle(fontSize: 14),
+                    style: TextStyle(fontSize: 14,color: Colors.white),
                   ),
                 ],
               ),
@@ -104,11 +104,11 @@ class DetailsScreen extends StatelessWidget {
                     child: ElevatedButton(
                       onPressed: () {},
                       style: ElevatedButton.styleFrom(
-                        backgroundColor: Colors.teal,
+                        backgroundColor: Colors.black,
                         padding: EdgeInsets.symmetric(vertical: 14),
                         shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(12)),
                       ),
-                      child: Text('Add to Cart', style: TextStyle(fontSize: 16)),
+                      child: Text('Add to Cart', style: TextStyle(fontSize: 16,color: Colors.white)),
                     ),
                   ),
                 ],

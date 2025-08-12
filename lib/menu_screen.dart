@@ -5,7 +5,7 @@ class menu_screen extends StatelessWidget {
   final List<Map<String, String>> dishes = [
     {
       'name': 'Paneer Butter Masala',
-      'image': 'assets/images/paneer.jpg',
+      'image': 'assets/images/paneer1.png',
       'time': '20 min',
       'rating': '4.8',
       'price': '₹250'
@@ -19,14 +19,14 @@ class menu_screen extends StatelessWidget {
     },
     {
       'name': 'Masala Dosa',
-      'image': 'assets/images/dosa.jpg',
+      'image': 'assets/images/dosa1.png',
       'time': '10 min',
       'rating': '4.7',
       'price': '₹120'
     },
     {
       'name': 'Gulab Jamun',
-      'image': 'assets/images/gulab.jpg',
+      'image': 'assets/images/gulab1.png',
       'time': '10 min',
       'rating': '4.9',
       'price': '₹150'
@@ -37,31 +37,41 @@ class menu_screen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("Food Menu"),
-        backgroundColor: Colors.teal,
+        title: Text("Food Menu",style: TextStyle(color: Colors.white),),
+        backgroundColor: Colors.red,
       ),
       body: Column(
         children:[
-          Padding(
-            padding: const EdgeInsets.symmetric(horizontal: 20),
-            child: TextField(
-              decoration: InputDecoration(
-                hintText: "Search",
-                prefixIcon: Icon(Icons.search),
-                border: OutlineInputBorder(
-                  borderRadius: BorderRadius.circular(12),
+            Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: Container(
+                decoration: BoxDecoration(
+                  color: Colors.white,borderRadius: BorderRadius.circular(16)
+                ),
+                child: TextField(
+                  decoration: InputDecoration(
+                    prefixIcon: Icon(Icons.search),
+                    hintText: 'search',
+                    enabledBorder: OutlineInputBorder(
+                      borderRadius: BorderRadius.circular(11),
+                        borderSide: BorderSide(color: Colors.white)
+                    ),
+                    focusedBorder: OutlineInputBorder(
+                      borderRadius: BorderRadius.circular(10),
+                      borderSide: BorderSide(color: Colors.white,width: 2)
+                    )
+                  ),
                 ),
               ),
             ),
-          ),
           Expanded(
             child: Container(
               margin: EdgeInsets.only(top: 16),
               padding: EdgeInsets.symmetric(horizontal: 16, vertical: 16),
-              color: Color(0xffB9D7D5),
+             // color: Color(0xffB9D7D5),
               child: GridView.count(
                 crossAxisCount: 2,
-                childAspectRatio: 1.8,
+                childAspectRatio: 1.0,
                 children: dishes.map((dish) {
                   return InkWell(
                     borderRadius: BorderRadius.circular(12),
