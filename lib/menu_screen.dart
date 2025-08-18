@@ -52,14 +52,7 @@ class menu_screen extends StatelessWidget {
                   decoration: InputDecoration(
                     prefixIcon: Icon(Icons.search),
                     hintText: 'search',
-                    enabledBorder: OutlineInputBorder(
-                      borderRadius: BorderRadius.circular(11),
-                        borderSide: BorderSide(color: Colors.white)
-                    ),
-                    focusedBorder: OutlineInputBorder(
-                      borderRadius: BorderRadius.circular(10),
-                      borderSide: BorderSide(color: Colors.white,width: 2)
-                    )
+
                   ),
                 ),
               ),
@@ -131,33 +124,22 @@ class menu_screen extends StatelessWidget {
               ),
             ),
           ),
+          Container(
+            color: Colors.white,
+            padding: EdgeInsets.symmetric(vertical: 8),
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.spaceAround,
+              children: [
+                IconButton(icon: Icon(Icons.menu, color: Colors.teal), onPressed: () {}),
+                IconButton(icon: Icon(Icons.favorite_border, color: Colors.grey), onPressed: () {}),
+                IconButton(icon: Icon(Icons.calendar_today, color: Colors.grey), onPressed: () {}),
+                IconButton(icon: Icon(Icons.person_outline, color: Colors.grey), onPressed: () {}),
+              ],
+            ),
+          ),
         ],
       ),
-      bottomNavigationBar: Container(
-        color: Colors.white,
-        padding: EdgeInsets.symmetric(vertical: 8),
-        child: Row(
-          mainAxisAlignment: MainAxisAlignment.spaceAround,
-          children: [
-            IconButton(
-              icon: Icon(Icons.menu, color: Colors.teal),
-              onPressed: () {},
-            ),
-            IconButton(
-              icon: Icon(Icons.favorite_border, color: Colors.grey),
-              onPressed: () {},
-            ),
-            IconButton(
-              icon: Icon(Icons.calendar_today, color: Colors.grey),
-              onPressed: () {},
-            ),
-            IconButton(
-              icon: Icon(Icons.person_outline, color: Colors.grey),
-              onPressed: () {},
-            ),
-          ],
-        ),
-      ),
+
     );
   }
 }
