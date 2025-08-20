@@ -8,11 +8,25 @@ class DetailsScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+    appBar: AppBar(
+      backgroundColor: Colors.transparent,
+      elevation: 0,
+      automaticallyImplyLeading: false,
+      title: Row(
+        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+        children: [
+          IconButton(onPressed: () {}, icon: Icon(Icons.arrow_back,color: Colors.white,)),
+          IconButton(onPressed: () {}, icon:Icon(Icons.add_shopping_cart,color: Colors.white,)),
+        ],
+      ),
+    ),
+      extendBodyBehindAppBar: true,
       body: SafeArea(
         child: Column(
           children: [
-            // Fullscreen Image on top
+
             Expanded(
+
               child: Image.asset(
                 dish['image']!,
                 width: double.infinity,   // fill width
@@ -21,36 +35,7 @@ class DetailsScreen extends StatelessWidget {
               ),
             ),
 
-            // Top buttons row (back + cart)
-            Container(
-              color: Colors.white,
-              padding: EdgeInsets.symmetric(horizontal: 12, vertical: 8),
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: [
-                  Container(
-                    decoration: BoxDecoration(
-                      color: Colors.white70,
-                      borderRadius: BorderRadius.circular(10),
-                    ),
-                    child: IconButton(
-                      icon: Icon(Icons.arrow_back, color: Colors.black),
-                      onPressed: () => Navigator.pop(context),
-                    ),
-                  ),
-                  Container(
-                    decoration: BoxDecoration(
-                      color: Colors.white70,
-                      borderRadius: BorderRadius.circular(10),
-                    ),
-                    child: IconButton(
-                      icon: Icon(Icons.shopping_cart_outlined, color: Colors.black),
-                      onPressed: () {},
-                    ),
-                  ),
-                ],
-              ),
-            ),
+
 
             // details
             Padding(

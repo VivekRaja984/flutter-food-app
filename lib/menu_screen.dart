@@ -37,7 +37,13 @@ class menu_screen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("Food Menu",style: TextStyle(color: Colors.white),),
+        title: Row(
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          children: [
+            Text("Food Menu",style: TextStyle(color: Colors.white),),
+            IconButton(onPressed: () {}, icon:Icon(Icons.add_shopping_cart,color: Colors.white,)),
+          ],
+        ),
         backgroundColor: Colors.red,
       ),
       body: Column(
